@@ -25,7 +25,7 @@ date_default_timezone_set('Africa/Lagos');
 |
 */
 
-$config['base_url'] = "https://www.gecharl.com";
+$config['base_url'] = "https://www.fcubedigital.com";
 
 /*
 |--------------------------------------------------------------------------
@@ -326,7 +326,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '4n9*^%%$3n^&4v&%7@!90&$$3c3x$^*$m8a456#@tgf%$$c';
+$config['encryption_key'] = '4n9*^%%$9n^&4v&%7@!90&$$3c3x$^*$m8a456#@tgf%$$c';
 
 /*
 |--------------------------------------------------------------------------
@@ -410,7 +410,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix'] = 'gecharl';
+$config['cookie_prefix'] = 'fcube';
 $config['cookie_domain'] = '';
 $config['cookie_path'] = '/';
 $config['cookie_secure'] = FALSE;
@@ -459,8 +459,8 @@ $config['global_xss_filtering'] = TRUE;
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
 $config['csrf_protection'] = FALSE;
-$config['csrf_token_name'] = 'csrf_gecharl';
-$config['csrf_cookie_name'] = 'csrf_gecharl';
+$config['csrf_token_name'] = 'csrf_fcube';
+$config['csrf_cookie_name'] = 'csrf_fcube';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
 $config['csrf_exclude_uris'] = array();
