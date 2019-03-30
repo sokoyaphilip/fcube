@@ -9,7 +9,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label class="label" for="Network">Select Network</label>
-                                        <select class="form-control" id="airtime_network" name="network">
+                                        <select class="form-control custom-select w-100 custom-select-lg" id="airtime_network" name="network">
                                             <option value="" selected>-- Select Network --</option>
                                             <?php foreach ($networks as $network ): ?>
                                                 <option data-discount="<?= $network->discount; ?>" data-network-name="<?= $network->network_name; ?>"
@@ -35,7 +35,7 @@
 
                             </div>
                             <input type="hidden" id="product_id" value="2">
-                            <button type="button" class="btn btn-outline-success btn-sm col-sm-4 airtime-purchase" data-balance="<?= $user->wallet;?>">Buy Now</button>&nbsp;&nbsp;
+                            <button type="button" class="btn btn-outline-danger btn-sm col-sm-4 airtime-purchase" data-balance="<?= $user->wallet;?>">Buy Now</button>&nbsp;&nbsp;
                             <button type="reset" class="btn btn-default btn-sm col-sm-4">Clear Form</button>&nbsp;&nbsp;
                         </form>
 

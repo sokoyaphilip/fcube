@@ -53,20 +53,33 @@ class Dashboard extends CI_Controller {
 	{
 		$page_data['pg_title'] = "My Wallet";
 		$page_data['pg_name'] = "wallet";
+		$id = $this->session->userdata('logged_id');
+        $page_data['user'] = $this->get_profile( $id );
+        $page_data['fundings'] = $this->site->get_result('transactions', '*' , " user_id = {$id}");
+        $page_data['transactions'] = $this->site->run_sql("SELECT id, trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE (product_id = 6 or product_id =7) AND user_id = {$id} ORDER BY id DESC LIMIT 10")->result();
 		$this->load->view('user/my_wallet', $page_data);
 	}
 	public function tv_subscription()
 	{
-		$page_data['pg_title'] = "TV Subscription";
-		$page_data['pg_name'] = "tv";
-		$this->load->view('user/tv_subscription', $page_data);
+        $page_data['pg_name'] = "tv";
+        $page_data['pg_title'] = 'Subscribe your GoTV, DSTV, Startimes ... decoder';
+        $id = $this->session->userdata('logged_id');
+        $page_data['user'] = $this->get_profile($id);
+        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.slug ='tv-subscription' ")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT id, trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE product_id = 3 AND user_id = {$id} ORDER BY id DESC LIMIT 10")->result();
+        $this->load->view('user/tv_subscription', $page_data);
 	}
 	public function data_recharge()
 	{
-		$page_data['pg_title'] = "Data Recharge";
 		$page_data['pg_name'] = "data";
+        $page_data['pg_title'] = 'Buy Mtn, Glo, 9mobile, Airtel Data Subscription, works for all smartphones...';
+        $id = $this->session->userdata('logged_id');
+        $page_data['user'] = $this->get_profile($id);
+        $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, s.network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='data' ")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT id, trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE product_id = 1 AND user_id = {$id} ORDER BY date_initiated DESC LIMIT 10")->result();
 		$this->load->view('user/data_recharge', $page_data);
 	}
+
 	public function airtime_recharge()
 	{
 		$page_data['pg_title'] = "Airtime Recharge";
@@ -78,10 +91,20 @@ class Dashboard extends CI_Controller {
         $page_data['transactions'] = $this->site->run_sql("SELECT id, trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE product_id = 2 AND user_id = {$id} ORDER BY id DESC LIMIT 10")->result();
 		$this->load->view('user/airtime_recharge', $page_data);
 	}
+
 	public function electric_bill()
 	{
-		$page_data['pg_title'] = "Electric Bills";
 		$page_data['pg_name'] = "electric";
+        $page_data['pg_title'] = 'Pay your electricity bill';
+        $id = $this->session->userdata('logged_id');
+        $page_data['user'] = $this->get_profile($id);
+        $page_data['plans'] = $this->site->run_sql("SELECT s.id service_id, network_name, discount, pl.id, pl.name, api.variation_name
+        FROM products p 
+        LEFT JOIN services s ON (p.id = s.product_id) 
+        JOIN plans pl ON (pl.sid = s.id)
+        LEFT JOIN api_variation api ON (api.plan_id = pl.id)
+        WHERE p.slug ='electricity-bill' ")->result();
+        $page_data['transactions'] = $this->site->run_sql("SELECT id, trans_id, amount, description, date_initiated,payment_method, product_id, status FROM transactions WHERE product_id = 4 AND user_id = {$id} ORDER BY id DESC LIMIT 10")->result();
 		$this->load->view('user/electric_bill', $page_data);
 	}
 

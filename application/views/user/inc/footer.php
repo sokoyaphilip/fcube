@@ -4,7 +4,7 @@
         <script>
             <?php
             $email = ($this->session->userdata('logged_in') ) ? $this->session->userdata('email') : 'hello@fcubedigital.com';
-            $user = ($this->session->userdata('logged_in')) ? $this->session->userdata('login_username') : 'Gecharl';
+            $user = ($this->session->userdata('logged_in')) ? $this->session->userdata('login_username') : 'Fcube';
             ?>
             let user = { 'email' : "<?= $email; ?>", 'user' : "<?= $user; ?>"};
         </script>

@@ -47,7 +47,7 @@
 			<div class="section" style="padding-top:unset;">
 				<div class="container table-responsive">
                     <h3>Your 10 most rescent Transactions</h3>
-                    <table class="table table-striped table-bordered table-dark" id="table">
+                    <table class="table table-striped table-bordered" id="table">
                         <thead>
                         <tr>
                             <th style="display: none"></th>
