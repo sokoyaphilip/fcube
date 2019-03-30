@@ -19,63 +19,68 @@
 		<!-- Fonts/Icons -->
 		<link href="<?= base_url("assets/plugins/font-awesome/css/all.css");?>" rel="stylesheet">
         <link href="<?= base_url("assets/plugins/themify/themify-icons.min.css");?>" rel="stylesheet">
-        <style>
-            ul.sidebar-menu li.active{
-                background: #ffc107;
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Oxygen', sans-serif;
+        }
+
+        ul.sidebar-menu li.active{
+            background: #ffc107;
+        }
+        ul.sidebar-menu li{
+            padding: 10px;
+        }
+        .dropdown-custom {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: 1000;
+            display: none;
+            float: right;
+            min-width: 10rem;
+            padding: .5rem 0;
+            margin: .125rem 0 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.15);
+            -webkit-transition: all 1.2s ease-out;
+            -moz-transition: all 1.2s ease-out;
+            -o-transition: all 1.2s ease-out;
+            transition: all 1.2s ease-out;
+        }
+        .user_icon:hover .dropdown-custom, .user_icon:focus .dropdown-custom{
+            display:block;
+        }
+        .user_icon{
+            position: fixed;
+            top: 0;
+            color: #1c6169;
+            z-index: 990;
+            background: #fff;
+            width: 60px;
+            height: 60px;
+            border-bottom: 1px solid #e6e6e6;
+            border-left: 1px solid #e6e6e6;
+            -webkit-transition: ease-out .2s;
+            transition: ease-out .2s;
+        }
+        .title-mobile{
+            margin-left:30%;
+            margin-top:10px;
+        }
+        @media screen and (max-width:768px){
+            .title-mobile{
+                display:block;
+                text-align:center;
+                margin-left:unset !important;
             }
-            ul.sidebar-menu li{
-                padding: 10px;
-            }
-			.dropdown-custom {
-				position: absolute;
-				top: 100%;
-				right: 0;
-				z-index: 1000;
-				display: none;
-				float: right;
-				min-width: 10rem;
-				padding: .5rem 0;
-				margin: .125rem 0 0;
-				font-size: 1rem;
-				color: #212529;
-				text-align: left;
-				list-style: none;
-				background-color: #fff;
-				background-clip: padding-box;
-				border: 1px solid rgba(0,0,0,.15);
-				-webkit-transition: all 1.2s ease-out;
-				-moz-transition: all 1.2s ease-out;
-				-o-transition: all 1.2s ease-out;
-				transition: all 1.2s ease-out;
-			}
-			.user_icon:hover .dropdown-custom, .user_icon:focus .dropdown-custom{
-				display:block;
-			}
-            .user_icon{
-                position: fixed;
-                top: 0;
-				color: #1c6169;
-                z-index: 990;
-                background: #fff;
-                width: 60px;
-                height: 60px;
-                border-bottom: 1px solid #e6e6e6;
-                border-left: 1px solid #e6e6e6;
-                -webkit-transition: ease-out .2s;
-                transition: ease-out .2s;
-            }
-			.title-mobile{
-				margin-left:30%;
-				margin-top:10px;
-			}
-			@media screen and (max-width:768px){
-				.title-mobile{
-					display:block;
-					text-align:center;
-					margin-left:unset !important;
-				}
-			}
-        </style>
+        }
+    </style>
 	</head>
 	<body data-preloader="2">
 		

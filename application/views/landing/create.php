@@ -6,15 +6,17 @@
 						<div class="row">
 							<div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
 								<h4 class="font-weight-light margin-bottom-30">Registration</h4>
-								<form>
-									<input type="text" placeholder="Username" name="name" required>
-									<input type="text" placeholder="Email" name="email" required>
-									<input type="password" placeholder="Password" name="pw" required>
-									<input type="password" placeholder="Confirm Password" name="pw2" required>
+                                <?php $this->load->view('msg_view'); ?>
+								<?= form_open('auth/create/')?>
+									<input type="text" placeholder="Username" name="name" value="<?= set_value('name')?>" required>
+									<input type="text" placeholder="Phone Number" name="phone" value="<?= set_value('phone')?>" required>
+									<input type="text" placeholder="Email" name="email" value="<?= set_value('email')?>" required>
+									<input type="password" placeholder="Password" name="password" required>
+									<input type="password" placeholder="Confirm Password" name="confirm_password" required>
 									<button class="button button-lg button-outline-white-2 button-fullwidth">Register</button>
-								</form>
+								<?= form_close();?>
 								<div class="margin-top-30">
-									<p>By signing up, you agree to our <a href="#">Terms of Use</a></p>
+									<p>Or <a href="<?= base_url('login');?>">Login</a> if you already have an account with us.</p>
 								</div>
 							</div>
 						</div><!-- end row -->

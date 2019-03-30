@@ -46,27 +46,33 @@
 
 			<div class="section" style="padding-top:unset;">
 				<div class="container table-responsive">
-				<table class="table table-bordered js-table" width="100%">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Full Name</th>
-              <th scope="col">Phone/Email</th>
-              <th scope="col">Date</th>
-              <th scope="col">Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>John</td>
-              <td>name@email.com</td>
-              <td>12/12/12</td>
-              <td>&#8358; 10,000</td>
-            </tr>
-          </tbody>
-        </table>
-
+                    <h3>Your 10 most rescent Transactions</h3>
+                    <table class="table table-striped table-bordered table-dark" id="table">
+                        <thead>
+                        <tr>
+                            <th style="display: none"></th>
+                            <th>Transaction ID</th>
+                            <th>Date & Time</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach( $transactions as $transaction ): ?>
+                            <tr>
+                                <td style="display:none;"><?= $transaction->id; ?></td>
+                                <td><?= $transaction->trans_id; ?></td>
+                                <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
+                                <td><?= product_name($transaction->product_id); ?></td>
+                                <td><?= payment_id_replacer($transaction->description); ?></td>
+                                <td><?= ngn($transaction->amount)?></td>
+                                <td><?= statusLabel( $transaction->status);?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
 				</div><!-- end container -->
 			</div>
 <?php $this->load->view('user/inc/footer');?>
