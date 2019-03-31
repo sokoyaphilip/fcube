@@ -19,7 +19,11 @@
 		<!-- Fonts/Icons -->
 		<link href="<?= base_url("assets/plugins/font-awesome/css/all.css");?>" rel="stylesheet">
         <link href="<?= base_url("assets/plugins/themify/themify-icons.min.css");?>" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
         <style>
+            body{
+                font-family: 'Oxygen', sans-serif;
+            }
             ul.sidebar-menu li.active{
                 background: #ffc107;
             }
@@ -93,14 +97,14 @@
 			<div class="dropdown-custom">
 				<a class="dropdown-item" href="<?= base_url("admin/wallet_funding");?>">Wallet Funding</a>
 				<a class="dropdown-item" href="<?= base_url("dashboard/manage_users");?>">Manage Users</a>
-				<a class="dropdown-item" href="#">Sign Out</a>
+				<a class="dropdown-item" href="<?= base_url('logout')?>">Sign Out</a>
 			</div>
 			</div>
 		</div>
 	        <div class="sidebar-nav-content"><!-- add background class here 'bg-grey / bg-dark / bg-dark-lighter' -->
 	        	<div class="sidebar-logo" style="text-align:center;background: #ffc107;padding-bottom: 0px;">
                     <!-- <h4 class="no-margin"><a href="../index.html">F-Cube Digitals</a></h4> -->
-					<img src="<?= base_url("assets/images/logo-1.jpeg");?>" style="width: 120px;min-height: 50px;" />
+					<a href="<?= base_url(); ?>" title="Homepage"><img src="<?= base_url("assets/images/logo-1.jpeg");?>" style="width: 120px;min-height: 50px;" /></a>
 				</div>
 				<ul class="sidebar-menu">
 					<li class="<?php if($pg_name == "dashboard") echo "active";?>">
@@ -118,8 +122,11 @@
 					<li class="<?php if($pg_name == "wallet") echo "active";?>">
 						<a class="" href="<?= base_url("admin/wallet_funding");?>"> <i class="fas fa-wallet"></i>  Wallet Funding</a>
 					</li>
+                    <li class="<?php if($pg_name == "airtime_cash") echo "active";?>">
+                        <a class="" href="<?= base_url("admin/airtime_to_cash");?>"> <i class="fas fa-wallet"></i>  Airtime To Cash</a>
+                    </li>
 					<li>
-						<a class="" href="#"> <i class="fas fa-power-off"></i> Sign Out</a>
+						<a class="" href="<?= base_url('logout');?>"> <i class="fas fa-power-off"></i> Sign Out</a>
 					</li>
 				</ul>
 				<div class="sidebar-bottom" style="padding:10px;">
@@ -128,7 +135,7 @@
 						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
 					</ul>
-					<p>&copy; <?= date("Y");?> F-Cube Diigitals</p>
+					<p>&copy; <?= date("Y");?> F-Cube Digitals</p>
 				</div>
 	        </div>
 		</div>

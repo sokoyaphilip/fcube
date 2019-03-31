@@ -104,7 +104,7 @@
 	        <div class="sidebar-nav-content"><!-- add background class here 'bg-grey / bg-dark / bg-dark-lighter' -->
 	        	<div class="sidebar-logo" style="text-align:center;background: #ffc107;padding-bottom: 0px;">
                     <!-- <h4 class="no-margin"><a href="../index.html">F-Cube Digitals</a></h4> -->
-					<img src="<?= base_url("assets/images/logo-1.jpeg");?>" style="width: 120px;min-height: 50px;" />
+					<a href="<?= base_url();?>"><img src="<?= base_url("assets/images/logo-1.jpeg");?>" style="width: 120px;min-height: 50px;" /></a>
 				</div>
 				<ul class="sidebar-menu">
 					<li class="<?php if($pg_name == "dashboard") echo "active";?>">

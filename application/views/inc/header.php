@@ -86,8 +86,19 @@
 						</li>
 						<li class="nav-item pull-right text-center">
                             <div class="btn-group text-center" style="height:100%;padding-top:7%;">
-							    <a class="btn btn-warning" href="<?= base_url('login')?>">Login</a>
-							    <a class="btn btn-warning" href="<?= base_url('register')?>">Register</a>
+                                <?php
+                                    if( $this->session->userdata('logged_in')) :
+                                ?>
+                                        <a class="btn btn-warning" href="<?= base_url('logout')?>">Logout</a>
+                                        <?php if( $this->session->userdata('is_admin') == 1 ) : ?>
+                                        <a class="btn btn-warning" href="<?= base_url('admin')?>">Admin</a>
+                                    <?php else: ?>
+                                        <a class="btn btn-warning" href="<?= base_url('dashnoard')?>">Dashboard</a>
+                                    <?php endif; ?>
+                                <?php else : ?>
+                                    <a class="btn btn-warning" href="<?= base_url('login')?>">Login</a>
+                                    <a class="btn btn-warning" href="<?= base_url('register')?>">Register</a>
+                                <?php endif; ?>
                             </div>
 						</li>
 					</ul><!-- end nav -->
