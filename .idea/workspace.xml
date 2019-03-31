@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed41b2-8c86-4dd8-86f1-fe6bf72507b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/admin/airtime_to_cash.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/inc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/inc/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/inc/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/inc/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/manage_plans.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/manage_plans.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/manage_services.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/manage_services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/manage_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/manage_users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/wallet_funding.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/wallet_funding.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/inc/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/landing/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/inc/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/inc/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/production/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/production/database.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,15 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/inc/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="89" column="80" selection-start-line="89" selection-start-column="80" selection-end-line="89" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/inc/sidebar.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -54,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="240" column="29" lean-forward="true" selection-start-line="240" selection-start-column="29" selection-end-line="240" selection-end-column="29" />
+            <state relative-caret-position="315">
+              <caret line="261" column="18" lean-forward="true" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
               <folding>
                 <element signature="n#manage_services#0;n#Admin#0;n#!!top" />
                 <element signature="n#airtime_to_cash#0;n#Admin#0;n#!!top" />
@@ -66,6 +45,22 @@
                 <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
                 <element signature="n#user_action#0;n#Admin#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/development/constants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1456" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -123,15 +118,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/manage_services.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -182,6 +168,7 @@
         <option value="$PROJECT_DIR$/application/views/admin/inc/sidebar.php" />
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/views/admin/airtime_to_cash.php" />
+        <option value="$PROJECT_DIR$/application/config/production/database.php" />
       </list>
     </option>
   </component>
@@ -269,17 +256,18 @@
       <workItem from="1553862190914" duration="593000" />
       <workItem from="1553942311050" duration="5812000" />
       <workItem from="1553978483802" duration="3169000" />
-      <workItem from="1554023155601" duration="11077000" />
+      <workItem from="1554023155601" duration="11248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29992000" />
+    <option name="totallyTimeSpent" value="30163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21492921" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21492921" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -292,7 +280,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993565" visible="true" weight="0.3305671" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4993565" visible="true" weight="0.3305671" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5006435" side_tool="true" weight="0.3305671" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -339,13 +327,6 @@
     <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1426" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="84" column="49" lean-forward="true" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/login.php">
@@ -395,11 +376,6 @@
         <state relative-caret-position="-2">
           <caret line="75" column="98" selection-start-line="75" selection-start-column="98" selection-end-line="111" selection-end-column="90" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/development/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1217" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/functions.js">
@@ -573,8 +549,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="240" column="29" lean-forward="true" selection-start-line="240" selection-start-column="29" selection-end-line="240" selection-end-column="29" />
+        <state relative-caret-position="315">
+          <caret line="261" column="18" lean-forward="true" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
           <folding>
             <element signature="n#manage_services#0;n#Admin#0;n#!!top" />
             <element signature="n#airtime_to_cash#0;n#Admin#0;n#!!top" />
@@ -582,6 +558,18 @@
             <element signature="n#confirm_payment#0;n#Admin#0;n#!!top" />
             <element signature="n#user_action#0;n#Admin#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/development/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1456" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
         </state>
       </provider>
     </entry>
