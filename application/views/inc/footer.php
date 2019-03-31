@@ -104,7 +104,8 @@
 		<script src="<?=base_url("assets/plugins/jarallax/jarallax-video.min.html");?>"></script>
 		<script src="<?=base_url("assets/plugins/magnific-popup/magnific-popup.min.html");?>"></script>
 		<script src="<?=base_url("assets/plugins/owl-carousel/owl.carousel.min.js");?>"></script>
-		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+        <script src="<?= base_url("assets/plugins/datatables/datatables.min.js");?>"></script>
 		<script src="<?=base_url("assets/plugins/gmaps.min.html");?>"></script>
 		<!-- Scripts -->
 		<script src="<?=base_url("assets/js/functions.min.html");?>"></script>
