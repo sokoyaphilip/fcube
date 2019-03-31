@@ -5,13 +5,13 @@ if(! defined('ENVIRONMENT') )
     $domain = strtolower($_SERVER['HTTP_HOST']);
 
     switch($domain) {
-        case 'gecharl.com' :
-        case 'https://www.gecharl.com':
-        case 'www.gecharl.com':
+        case 'fcubedigital.com' :
+        case 'https://www.fcubedigital.com':
+        case 'www.fcubedigital.com':
             define('ENVIRONMENT', 'production');
             break;
 
-        case 'dev.gecharl.com' :
+        case 'dev.fcubedigital.com' :
             //our staging server
             define('ENVIRONMENT', 'staging');
             break;

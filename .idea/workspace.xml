@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed41b2-8c86-4dd8-86f1-fe6bf72507b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/config/production/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/production/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.php" beforeDir="false" afterPath="$PROJECT_DIR$/environment.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +56,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
               <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/environment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -96,24 +116,6 @@
               <folding>
                 <element signature="e#1721#2290#0#HTML" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/inc/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/airtime_recharge.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="68" lean-forward="true" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -169,6 +171,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/application/views/admin/airtime_to_cash.php" />
         <option value="$PROJECT_DIR$/application/config/production/database.php" />
+        <option value="$PROJECT_DIR$/environment.php" />
       </list>
     </option>
   </component>
@@ -256,12 +259,12 @@
       <workItem from="1553862190914" duration="593000" />
       <workItem from="1553942311050" duration="5812000" />
       <workItem from="1553978483802" duration="3169000" />
-      <workItem from="1554023155601" duration="11248000" />
+      <workItem from="1554023155601" duration="11324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30163000" />
+    <option name="totallyTimeSpent" value="30239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -322,11 +325,6 @@
           <caret line="461" column="40" selection-start-line="461" selection-start-column="40" selection-end-line="461" selection-end-column="40" />
           <caret line="462" column="41" selection-start-line="462" selection-start-column="41" selection-end-line="462" selection-end-column="41" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1426" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/landing/login.php">
@@ -570,6 +568,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/production/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
