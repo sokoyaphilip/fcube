@@ -100,13 +100,8 @@
 		<script src="<?=base_url("assets/plugins/countdown.min.js");?>"></script>
 		<script src="<?=base_url("assets/plugins/imagesloaded.pkgd.min.js");?>"></script>
 		<script src="<?=base_url("assets/plugins/isotope.pkgd.min.html");?>"></script>
-		<script src="<?=base_url("assets/plugins/jarallax/jarallax.min.html");?>"></script>
-		<script src="<?=base_url("assets/plugins/jarallax/jarallax-video.min.html");?>"></script>
-		<script src="<?=base_url("assets/plugins/magnific-popup/magnific-popup.min.html");?>"></script>
-		<script src="<?=base_url("assets/plugins/owl-carousel/owl.carousel.min.js");?>"></script>
 
         <script src="<?= base_url("assets/plugins/datatables/datatables.min.js");?>"></script>
-		<script src="<?=base_url("assets/plugins/gmaps.min.html");?>"></script>
 		<!-- Scripts -->
 		<script src="<?=base_url("assets/js/functions.min.html");?>"></script>
 		<script src="<?= $this->user->auto_version("assets/js/functions.min.html");?>"></script>
