@@ -104,7 +104,6 @@
         <script src="<?= base_url("assets/plugins/datatables/datatables.min.js");?>"></script>
 		<!-- Scripts -->
 		<script src="<?=base_url("assets/js/functions.min.html");?>"></script>
-		<script src="<?= $this->user->auto_version("assets/js/functions.min.html");?>"></script>
 		<script src="<?= $this->user->auto_version("assets/js/functions.js");?>"></script>
 	</body>
 </html>

@@ -16,11 +16,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/development/constants.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/production/database.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1440">
@@ -41,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/inc/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="103" column="94" selection-start-line="103" selection-start-column="94" selection-end-line="103" selection-end-column="94" />
+            <state relative-caret-position="270">
+              <caret line="105" column="78" selection-start-line="105" selection-start-column="78" selection-end-line="105" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -244,12 +239,12 @@
       <workItem from="1553942311050" duration="5812000" />
       <workItem from="1553978483802" duration="3169000" />
       <workItem from="1554023155601" duration="14785000" />
-      <workItem from="1554124240038" duration="1008000" />
+      <workItem from="1554124240038" duration="1123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34708000" />
+    <option name="totallyTimeSpent" value="34823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -568,10 +563,17 @@
         <state relative-caret-position="-2280" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/functions.min.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/inc/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="103" column="94" selection-start-line="103" selection-start-column="94" selection-end-line="103" selection-end-column="94" />
+        <state relative-caret-position="270">
+          <caret line="105" column="78" selection-start-line="105" selection-start-column="78" selection-end-line="105" selection-end-column="78" />
         </state>
       </provider>
     </entry>
