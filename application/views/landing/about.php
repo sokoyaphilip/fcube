@@ -17,14 +17,14 @@
 							<div class="col-6 gallery-box">
 								<div class="gallery-img">
 									<a href="#" data-gallery-title="Gallery Image 1">
-										<img src="<?= base_url("assets/images/business-creative-about-1.jpg");?>" alt="">
+										<img src="<?= base_url("assets/images/about-us1.jpeg");?>" alt="About Fcube digital">
 									</a>
 								</div>
 							</div>
 							<div class="col-6 gallery-box">
 								<div class="gallery-img">
 									<a href="#" data-gallery-title="Gallery Image 2">
-										<img src="<?= base_url("assets/images/business-creative-about-2.jpg");?>" alt="">
+										<img src="<?= base_url("assets/images/about-us2.jpeg");?>" alt="About Fcube digital">
 									</a>
 								</div>
 							</div>
