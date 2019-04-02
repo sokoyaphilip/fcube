@@ -62,9 +62,9 @@
 						<div class="col-12 col-md-6 col-lg-3">
 							<h6 class="heading-uppercase">Contact Info</h6>
 							<ul class="list-unstyled">
-								<li>121 King St, Melbourne VIC 3000</li>
-								<li>contact@example.com</li>
-								<li>+(123) 456 789 01</li>
+								<li><?= lang('address'); ?></li>
+								<li><?= lang('app_email'); ?></li>
+								<li><?= lang('contact_no'); ?></li>
 							</ul>
 						</div>
 					</div><!-- end row(1) -->

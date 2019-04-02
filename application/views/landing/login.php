@@ -8,7 +8,7 @@
                         <h4 class="font-weight-light margin-bottom-30">Enter your login</h4>
                         <?php $this->load->view('msg_view'); ?>
                         <?= form_open('auth/login')?>
-                            <input type="text" placeholder="Username" name="username" value="<?= set_value('username'); ?>" required>
+                            <input type="text" placeholder="Username" name="username" autocapitalize="off" autocomplete="off" value="<?= set_value('username'); ?>" required>
                             <input type="password" placeholder="Password" name="password" required>
                             <button class="button button-lg button-outline-white-2 button-fullwidth">Login</button>
                         <?= form_close(); ?>

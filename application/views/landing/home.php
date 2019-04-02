@@ -6,7 +6,8 @@
 					<div class="row">
 						<div class="col-12 col-sm-10 col-md-8 col-lg-7">
 							<div class="bg-black-07 padding-50">
-								<h2 class="font-weight-light no-margin">All Recharge, Subscription, and Payment Transactions at your finger tip.</h2>
+                                <h3>WELCOME TO F-CUBE DIGITALS</h3>
+								<h4 class="font-weight-light no-margin">Your best choice for all Recharges, subscriptions and Bill payments.</h4>
 							</div>
 						</div>
 					</div><!-- end row -->
@@ -49,7 +50,7 @@
 					</div>
 					<div class="col-12 col-lg-6">
 						<h2 class="font-weight-light">We Are F-Cube Digitals</h2>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<p>F-CUBE DIGITALS is an enterprise solution which offers a platform for all airtime recharges for all networks, internet data subscriptions for all networks, cable tv subscriptions like DSTV, GOtv, startimes, etc as well as Electricity bill payments.</p>
 						<a class="button button-lg button-radius button-reveal-left-outline-dark margin-top-30" href="<?= base_url("about")?>"><i class="ti-arrow-right"></i><span>More About Us</span></a>
 					</div>
 				</div><!-- end row -->

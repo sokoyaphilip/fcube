@@ -8,7 +8,7 @@
 								<h4 class="font-weight-light margin-bottom-30">Registration</h4>
                                 <?php $this->load->view('msg_view'); ?>
 								<?= form_open('auth/create/')?>
-									<input type="text" placeholder="Full name" name="name" value="<?= set_value('name')?>" required>
+									<input type="text" placeholder="Full name" autocapitalize="off" autocomplete="off" name="name" value="<?= set_value('name')?>" required>
 									<input type="text" placeholder="Phone Number" name="phone" value="<?= set_value('phone')?>" required>
 									<input type="text" placeholder="Email" name="email" value="<?= set_value('email')?>" required>
 									<input type="password" placeholder="Password" name="password" required>
