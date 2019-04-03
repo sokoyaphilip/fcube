@@ -21,6 +21,6 @@ if(! defined('ENVIRONMENT') )
             break;
     }
 
-    die( ENVIRONMENT );
+//    die( ENVIRONMENT );
 }
 
