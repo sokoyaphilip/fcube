@@ -129,7 +129,7 @@
 						<a class="" href="<?= base_url("dashboard/my_wallet");?>"> <i class="fas fa-wallet"></i> My Wallet</a>
 					</li>
 					<li>
-						<a class="" href="#"> <i class="fas fa-power-off"></i> Sign Out</a>
+						<a class="" href="<?= base_url('logout')?>"> <i class="fas fa-power-off"></i> Sign Out</a>
 					</li>
 				</ul>
 				<div class="sidebar-bottom" style="padding:10px;">
