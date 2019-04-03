@@ -73,7 +73,7 @@ class Dashboard extends CI_Controller {
 	public function data_recharge()
 	{
 		$page_data['pg_name'] = "data";
-        $page_data['pg_title'] = 'Buy Mtn, Glo, 9mobile, Airtel Data Subscription, works for all smartphones...';
+        $page_data['pg_title'] = 'Data - Subscription.';
         $id = $this->session->userdata('logged_id');
         $page_data['user'] = $this->get_profile($id);
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, s.network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='data' ")->result();
