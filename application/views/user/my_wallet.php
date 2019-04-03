@@ -51,7 +51,7 @@
                                         <select class="form-control custom-select w-100 custom-select-lg" name="bank" id="bank" required>
                                             <option value=""> -- Select the bank you're paying to --</option>
                                             <?php
-                                            $banks = explode(',', lang('company_banks'));
+                                            $banks = explode('|', lang('company_banks'));
                                             foreach( $banks as $bank ):
                                                 ?>
                                                 <option value="<?= trim( $bank ); ?>"> <?= trim($bank); ?> </option>
