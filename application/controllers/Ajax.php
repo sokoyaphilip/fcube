@@ -225,8 +225,6 @@ class Ajax extends CI_Controller {
     public function data_purchase(){
         $response = array('status' => 'error');
 
-
-        $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
         $this->form_validation->set_rules('network_id', 'Network','trim|required|xss_clean');
         $this->form_validation->set_rules('plan_id', 'Data Plan','trim|required|xss_clean');
         $this->form_validation->set_rules('recipents', 'Recipents Number','trim|required|xss_clean');
@@ -243,7 +241,6 @@ class Ajax extends CI_Controller {
         $plan_id = $this->input->post('plan_id');
         $network_name = $network_row->network_name;
         $wallet = $this->input->post('wallet');
-        $amount = $this->input->post('amount');
 
         // check for number validity
         $message = $description_number =  $invalid_numbers = '';
@@ -283,7 +280,7 @@ class Ajax extends CI_Controller {
         $count = count($valid_numbers);
         $plan_detail = $this->site->run_sql("SELECT name, amount FROM plans WHERE id = {$plan_id}")->row();
         if( $count ){
-            $total_amount = $count * $amount;
+            $total_amount = $count * $plan_detail->amount;
 //            if( $discount > 1 ){
 //                $total_amount = $total_amount - ( $discount/100 * $total_amount );
 //            }

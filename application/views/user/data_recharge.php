@@ -30,7 +30,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="recipent">Enter Phone Number</label>
-                                    <textarea name="recipents" class="form-control recipents numberAndComma" id="data-recipents" rows="3" placeholder="For multiple recipents, separate it with comma(,)"></textarea>
+                                    <textarea name="recipents" class="form-control recipents numberAndComma" id="recipents" rows="3" placeholder="For multiple recipents, separate it with comma(,)"></textarea>
                                 </div>
                             </div>
 

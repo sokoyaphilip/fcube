@@ -24,6 +24,7 @@
                             </li>
                         </ul>
                     </div>
+                    <?php $this->load->view('msg_view'); ?>
                     <div class="">
                         <form>
                             <div class="row">

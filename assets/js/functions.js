@@ -229,7 +229,7 @@ $(document).ready(function() {
         let recipents = $('#recipents').val();
         let network_id = $('#network').val();
         let plan_id = $('#network_plan').val();
-        let wallet = _btn.data('wallet');
+        let wallet = _btn.data('balance');
 
         if( network_id === '') {
             _btn.prop('disabled', false);
