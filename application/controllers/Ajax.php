@@ -223,16 +223,27 @@ class Ajax extends CI_Controller {
     // DAta purchase
 
     public function data_purchase(){
-
         $response = array('status' => 'error');
 
-        $product_id = $this->input->post('product_id', true);
-        $plan_id = $this->input->post('plan_id', true);
-        $recipents = $this->input->post('recipents', true);
-        $network_id = $this->input->post('network', true);
-        $network_name = $this->input->post('network_name', true);
+
+        $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
+        $this->form_validation->set_rules('network_id', 'Network','trim|required|xss_clean');
+        $this->form_validation->set_rules('plan_id', 'Data Plan','trim|required|xss_clean');
+        $this->form_validation->set_rules('recipents', 'Recipents Number','trim|required|xss_clean');
+        if(  $this->form_validation->run() == FALSE ){
+            $response['message'] = validation_errors();
+            $this->return_response( $response );
+        }
+
+
+        $network_id = $this->input->post('network_id');
+        $network_row = $this->get_network( $network_id );
+        $product_id = $network_row->product_id;
+        $recipents = $this->input->post('recipents');
+        $plan_id = $this->input->post('plan_id');
+        $network_name = $network_row->network_name;
         $wallet = $this->input->post('wallet');
-        $user_id = $this->session->userdata('user_id');
+        $discount = $network_row->discount;
 
         // check for number validity
         $message = $description_number =  $invalid_numbers = '';
@@ -305,19 +316,6 @@ class Ajax extends CI_Controller {
                         }
                         $this->load->library('AfricaSMS', $sms_array);
                         $this->africasms->sendsms();
-//                        $array['message'] = ' ' . $ret;
-//                        $this->callSMSAPI($array);
-//                        $sms_array = array('to' => '08066795128', 'message' => $ret );
-//                        $this->load->library('JusibeSMS', $sms_array);
-//                        $this->jusibesms->sendsms();
-
-//                        $receiver = "08169254598";
-//                        $result = file_get_contents('http://www.supertextng.com/api.php?username=sokoyaphilip&password=philpass19&destination='.$receiver.'&message='.$ret.'&sender=GecharlData&nodnd=yes');
-//                        $response['message'] .= ' again ' . $result;
-//                        if( is_int($result) ){
-//                            $error = true;
-//                        }
-//                        }
                     }else{
                         $error = true;
                     }
@@ -331,7 +329,7 @@ class Ajax extends CI_Controller {
                 if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
                     $this->site->insert_data('transactions', $insert_data);
                     $response['status'] = 'success';
-                    $response['message'] = "Thanks for using Gecharl. Your {$plan_detail->name} data plan order for {$message} has been processed and should be received in less than a minutes. <br />";
+                    $response['message'] = "Thanks for using " .lang('app_name'). ". Your {$plan_detail->name} data plan order for {$message} has been processed and should be received in less than a minutes. <br />";
                     if( $invalid_numbers != '' ){
                         $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or {$network_name} number";
                     }
@@ -372,9 +370,6 @@ class Ajax extends CI_Controller {
         $network_name = $network_row->network_name;
         $wallet = $this->input->post('wallet');
         $discount = $network_row->discount;
-
-
-
 
         // check number validity
         $message = $description_number =  $invalid_numbers = '';
@@ -471,141 +466,6 @@ class Ajax extends CI_Controller {
             $this->return_response($response);
         }
 
-    }
-
-    public function quick_airtime(){
-        $response = array('status' => 'error');
-        // LETS PROCESS
-
-        $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
-        $this->form_validation->set_rules('recipents', 'Recipents NUmber','trim|required|xss_clean');
-        if(  $this->form_validation->run() == FALSE ){
-            $response['message'] = validation_errors();
-            $this->return_response( $response );
-        }
-
-        $product_id = $this->input->post('product_id', true);
-        $amount = $this->input->post('amount', true);
-        $recipents = $this->input->post('recipents', true);
-        $network_name = $this->input->post('network_name', true);
-//        $wallet = $this->input->post('wallet');
-        $payment = $this->input->post('payment');
-        $discount = $this->input->post('discount');
-
-        if( empty( $recipents) ){
-            $response['message'] = "Error: receiver number can not be empty.";
-            $this->return_response( $response );
-        }
-
-        if( $amount < 100 ){
-            $response['message'] = "Error: amount can not be less than N100.";
-            $this->return_response( $response );
-        }
-        if( $amount > 5000 ){
-            $response['message'] = "Error: amount can not be less than N100.";
-            $this->return_response( $response );
-        }
-
-
-        // check number validity
-        $message = $description_number =  $invalid_numbers = '';
-        $valid_numbers = array();
-        $numbers = explode(',', $recipents );
-        foreach( $numbers as $key => $msisdn ){
-            $msisdn = preg_replace('/\D/', '', $msisdn);
-            $strlen = strlen( $msisdn );
-            switch ($strlen) {
-                case 11:
-                    $local_prefix = substr($msisdn, 0 , 4);
-                    if( in_array($local_prefix, NIGERIA_TELCOS[$network_name])){
-                        array_push($valid_numbers, $msisdn);
-                        $message .= $msisdn. ',';
-                    }else{
-                        $invalid_numbers .= $msisdn;
-                    }
-                    break;
-                case 13:
-                    $local_prefix = substr($msisdn, 0 , 6);
-                    if( in_array($local_prefix, NIGERIA_TELCOS[$network_name])){
-                        array_push($valid_numbers, $msisdn);
-                        $message .= $msisdn. ',';
-                    }else{
-                        $invalid_numbers .= $msisdn;
-                    }
-                    break;
-                default:
-                    $invalid_numbers .= $msisdn;
-                    break;
-
-            }
-        }
-        $count = count($valid_numbers);
-        if( $count ){
-            $total_amount = $count * $amount;
-            if( $discount > 1 ){
-                $total_amount = $total_amount - ( $discount/100 * $total_amount );
-            }
-
-//            if( $payment == 2 && $total_amount > $wallet ){
-//                $response['message'] = "You don't have enough fund to process this, please fund your wallet first." . $wallet;
-//                $this->return_response($response);
-//            }
-            $description = ucfirst( $network_name) . " ({$amount}) airtime purchase for {$message} recipent";
-            $transaction_id = $this->site->generate_code('transactions', 'trans_id');
-            $charge = 0;
-            $payment_method = 3;
-            if( $payment_method == 3 ) {
-
-                if( $total_amount < 2500 ){
-                    $charge = (1.5 / 100 ) * $amount;
-                }elseif( $total_amount > 2500 ){
-                    $charge = (1.5 / 100 ) * $amount + 100;
-                }
-            }
-            $insert_data = array(
-                'amount'        => $total_amount,
-                'charge'        => $charge,
-                'product_id'    => $product_id,
-                'description'   => $description,
-                'trans_id'      => $transaction_id,
-                'payment_method' => $payment,
-                'date_initiated'    => get_now(),
-                'status'        => 'pending'
-            );
-
-            // Call Payment Channel
-
-            // Success from payment channel -> Call the API
-//            if( $payment == 2 ) {
-//                foreach( $valid_numbers as $number ){
-//                    $data = array(
-//                        'url'       => "https://www.nellobytesystems.com/APIBuyCableTV.asp",
-//                        'network'   => $network_name,
-//                        'amount'    => $amount,
-//                        'number'    => $number
-//                    );
-//                    $return = $this->callAirtimeAPI( $data );
-//                    if( $return['status'] == "ORDER_RECEIVED" || $return['status'] == "ORDER_COMPLETED" ){
-//                        $insert_data['orderid'] = $return['orderid'];
-//                        $insert_data['status'] = 'success';
-//                        $insert_data['payment_status'] = $return['status'];
-//                    }else{
-//                        $insert_data['status'] = 'pending';
-//                        $insert_data['orderid'] = $return['orderid'];
-//                        $insert_data['payment_status'] = $return['status'];
-//                    }
-//                }
-//            }
-            // else call the payment channel
-            $this->site->insert_data('transactions', $insert_data);
-            $response['status'] = 'success';
-            $response['message'] = $transaction_id;
-            $response['amount'] = $total_amount;
-            $this->return_response($response);
-        }else{
-            $response['message'] = "We couldn't process your order because the number(s) {$invalid_numbers} is not ". ucfirst($network_name). " number(s) ";
-            $this->return_response($response);
-        }
     }
 
 
@@ -870,8 +730,6 @@ class Ajax extends CI_Controller {
             $this->return_response( $response );
         }
     }
-
-
 
 
     private function _submitGet( $data ){

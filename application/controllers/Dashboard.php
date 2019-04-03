@@ -63,7 +63,7 @@ class Dashboard extends CI_Controller {
 	public function tv_subscription()
 	{
         $page_data['pg_name'] = "tv";
-        $page_data['pg_title'] = 'Subscribe your GoTV, DSTV, Startimes ... decoder';
+        $page_data['pg_title'] = 'TV Cable Subscription';
         $id = $this->session->userdata('logged_id');
         $page_data['user'] = $this->get_profile($id);
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.slug ='tv-subscription' ")->result();
