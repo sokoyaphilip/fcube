@@ -85,7 +85,7 @@ class Dashboard extends CI_Controller {
 	{
 		$page_data['pg_title'] = "Airtime Recharge";
 		$page_data['pg_name'] = "airtime";
-        $page_data['title'] = 'Buy Mtn, Glo, 9mobile, Airtel Airtime';
+        $page_data['title'] = 'Recharge Airtime';
         $id = $this->session->userdata('logged_id');
         $page_data['user'] = $this->get_profile($id);
         $page_data['networks'] = $this->site->run_sql("SELECT p.slug, s.id, s.title, network_name, discount FROM products p LEFT JOIN services s ON (p.id = s.product_id) WHERE p.title ='airtime' ")->result();
