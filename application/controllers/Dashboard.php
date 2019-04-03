@@ -213,7 +213,7 @@ class Dashboard extends CI_Controller {
                 $array['message'] = 'A user just claimed to pay N'.$amount .' Go to dashboard to confirm.';
                 $this->callSMSAPI($array);
                 $this->session->set_flashdata('success_msg', "Your request has been received, we'll treat it as soon as possible.");
-                redirect('dashboard/wallet/');
+                redirect('dashboard/my_wallet/');
             }else{
                 $this->session->set_flashdata('error_msg', "There was an error processing your request.");
                 redirect( $_SERVER['HTTP_REFERER']);

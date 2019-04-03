@@ -15,7 +15,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="bank_name">Bank Name</label>
-                                <select name="bank_name" class="form-control">
+                                <select name="bank_name" class="form-control custom-select w-100 custom-select-lg">
                                     <option value="">--Select--</option>
                                     <?php
                                     $banks = explode(',', lang('banks'));
