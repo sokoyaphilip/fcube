@@ -97,8 +97,8 @@ $nigeria_telcos = array(
 
 defined('NIGERIA_TELCOS') OR define('NIGERIA_TELCOS', $nigeria_telcos);
 // API
-defined('CK_USER_ID')      OR define('CK_USER_ID', "CK10073078"); //Clubkonnect User ID
-defined('CK_KEY')      OR define('CK_KEY', "57E90LT10E07S132AUM7JV10B6HT4Y4IVDCT50U8L8TQP3R458S14G9AWO679XO3"); //Clubkonnect User Key
+defined('CK_USER_ID')      OR define('CK_USER_ID', "CK10121618"); //Clubkonnect User ID
+defined('CK_KEY')      OR define('CK_KEY', "98746944D0R7535KKZR4T2J8WL00KW1DX891GXQ0WVQ7V5NBHBIIBTK6608S918D"); //Clubkonnect User Key
 defined('CK_AIRTIME_URL')      OR define('CK_AIRTIME_URL', "https://www.nellobytesystems.com/APIBuyAirTime.asp"); //Clubkonnect Airtime
 
 // VT PASS
