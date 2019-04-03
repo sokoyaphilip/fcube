@@ -243,7 +243,7 @@ class Ajax extends CI_Controller {
         $plan_id = $this->input->post('plan_id');
         $network_name = $network_row->network_name;
         $wallet = $this->input->post('wallet');
-        $discount = $network_row->discount;
+        $amount = $this->input->post('amount');
 
         // check for number validity
         $message = $description_number =  $invalid_numbers = '';
@@ -283,7 +283,11 @@ class Ajax extends CI_Controller {
         $count = count($valid_numbers);
         $plan_detail = $this->site->run_sql("SELECT name, amount FROM plans WHERE id = {$plan_id}")->row();
         if( $count ){
-            $total_amount = $count * $plan_detail->amount;
+            $total_amount = $count * $amount;
+//            if( $discount > 1 ){
+//                $total_amount = $total_amount - ( $discount/100 * $total_amount );
+//            }
+
             if( $total_amount > $wallet ){
                 $response['message'] = "You don't have enough money in your wallet for the transaction.";
                 $this->return_response($response);
@@ -306,16 +310,9 @@ class Ajax extends CI_Controller {
                     // fire the API
                     $number = chunk_split($number, 4, ' ');
                     $ret = data_plan_code( $network_name, $plan_detail->name, $number);
-
-//                    $response['message'] = $ret .' Network name ' . $network_name . ' Plan name ' . $plan_detail->name .' number ' . $number;
                     if( $ret !== false ){
-                        if( $network_name != 'mtn' || $network_name != "MTN" ){
-                            $sms_array = array( '09069118406' => $ret);
-                        }else{
-                            $sms_array = array( '08066795128' => $ret);
-                        }
-                        $this->load->library('AfricaSMS', $sms_array);
-                        $this->africasms->sendsms();
+                        $sms_array = array( 'message' => $ret);
+                        $this->callSMSAPI( $sms_array );
                     }else{
                         $error = true;
                     }
@@ -788,8 +785,8 @@ class Ajax extends CI_Controller {
                 'url'   => "https://www.nellobytesystems.com/APIBuyBulkSMS.asp",
                 'UserID' => CK_USER_ID,
                 'APIKey' => CK_KEY,
-                'Sender' => 'Gecharl',
-                'Recipient' => '09069118406',
+                'Sender' => 'Fcube',
+                'Recipient' => '08162943749',
                 'Message' => $data['message']
 //                08151148607
             )
