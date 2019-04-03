@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed41b2-8c86-4dd8-86f1-fe6bf72507b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/views/user/inc/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/inc/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/user/payment_made.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user/my_wallet.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/my_wallet.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/user/inc/sidebar.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
@@ -24,14 +26,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/user/my_wallet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="55" column="50" lean-forward="true" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            <state relative-caret-position="129">
+              <caret line="119" column="60" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
               <folding>
                 <element signature="e#6081#6087#0#HTML" expanded="true" />
                 <element signature="e#6087#6093#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/user/payment_made.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="176" column="32" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="32" />
+              <folding>
+                <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
+                <element signature="n#payment_made#0;n#Dashboard#0;n#!!top" />
+                <element signature="n#payment_made_process#0;n#Dashboard#0;n#!!top" />
+                <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
+                <element signature="n#callSMSAPI#0;n#Dashboard#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -51,24 +78,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="268">
               <caret line="65" column="1" lean-forward="true" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/airtime_recharge.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="37" column="96" lean-forward="true" selection-start-line="37" selection-start-column="96" selection-end-line="37" selection-end-column="112" />
             </state>
           </provider>
         </entry>
@@ -149,6 +158,8 @@
       <find>airtime-purchase</find>
       <find>buy_ai</find>
       <find>fund</find>
+      <find>sign</find>
+      <find>payment_made</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,8 +206,9 @@
         <option value="$PROJECT_DIR$/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/application/language/english/english_lang.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
-        <option value="$PROJECT_DIR$/application/views/user/my_wallet.php" />
         <option value="$PROJECT_DIR$/application/views/user/inc/sidebar.php" />
+        <option value="$PROJECT_DIR$/application/views/user/payment_made.php" />
+        <option value="$PROJECT_DIR$/application/views/user/my_wallet.php" />
       </list>
     </option>
   </component>
@@ -246,13 +258,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/user" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/views/user" />
       <recent name="$PROJECT_DIR$/application/views/admin" />
     </key>
   </component>
@@ -288,12 +301,12 @@
       <workItem from="1554124240038" duration="4039000" />
       <workItem from="1554190402899" duration="789000" />
       <workItem from="1554196167387" duration="603000" />
-      <workItem from="1554295708834" duration="8903000" />
+      <workItem from="1554295708834" duration="9130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48034000" />
+    <option name="totallyTimeSpent" value="48261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -575,21 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="n#index#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#payment_made#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#payment_made_process#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#callSMSAPI#0;n#Dashboard#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/data_recharge.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -623,17 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/my_wallet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="55" column="50" lean-forward="true" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-          <folding>
-            <element signature="e#6081#6087#0#HTML" expanded="true" />
-            <element signature="e#6087#6093#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -656,6 +643,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="131" column="62" selection-start-line="131" selection-start-column="62" selection-end-line="131" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/payment_made.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="176" column="32" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="32" />
+          <folding>
+            <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#payment_made#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#payment_made_process#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
+            <element signature="n#callSMSAPI#0;n#Dashboard#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/my_wallet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="119" column="60" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
+          <folding>
+            <element signature="e#6081#6087#0#HTML" expanded="true" />
+            <element signature="e#6087#6093#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

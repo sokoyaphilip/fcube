@@ -117,7 +117,7 @@
                             <td>
                                 <?= $transaction->trans_id; ?>
                                 <?php if( $transaction->payment_method == 1 && $transaction->status == 'pending') : ?>
-                                    <span><a href="<?= base_url('dashboard/payment_made/?tid=' . $transaction->trans_id)?>">Confirm Payment</a></span>
+                                    <span class="text-danger"><a href="<?= base_url('dashboard/payment_made/?tid=' . $transaction->trans_id)?>">Confirm Payment</a></span>
                                 <?php endif;?>
                             </td>
                             <td><?= neatDate( $transaction->date_initiated) . ' ' . neatTime( $transaction->date_initiated); ?></td>
