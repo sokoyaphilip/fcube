@@ -38,7 +38,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="deposit_type">Deposit Type</label>
-                                <select name="deposit_type" required class="form-control">
+                                <select name="deposit_type" required class="form-control custom-select w-100 custom-select-lg">
                                     <option value="Cash Deposit" selected>Cash Deposit</option>
                                     <option value="Mobile Banking">Mobile Banking</option>
                                     <option value="Internet Banking Transfer">Internet Banking Transfer</option>
@@ -63,12 +63,12 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="pop">Upload Proof of Payment</label>
-                                <input type="file" name="pop" required class="form-control" >
+                                <input type="file" name="pop" required class="" >
                             </div>
                         </div>
 
 
-                        <button type="submit" class="btn btn-cta btn-cta-primary btn-sm col-sm-4">Submit</button>&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-danger btn-sm col-sm-4">Submit</button>&nbsp;&nbsp;
                         <button type="reset" class="btn btn-cta btn-cta-secondary btn-sm col-sm-3">Clear Form</button>&nbsp;&nbsp;
 
                         <?= form_close(); ?>
