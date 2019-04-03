@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed41b2-8c86-4dd8-86f1-fe6bf72507b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/user/payment_made.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/my_wallet.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/my_wallet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/user/my_wallet.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="129">
@@ -48,14 +46,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="176" column="32" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="32" />
+            <state relative-caret-position="329">
+              <caret line="189" column="39" lean-forward="true" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
               <folding>
                 <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
-                <element signature="n#payment_made#0;n#Dashboard#0;n#!!top" />
                 <element signature="n#payment_made_process#0;n#Dashboard#0;n#!!top" />
                 <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
                 <element signature="n#callSMSAPI#0;n#Dashboard#0;n#!!top" />
@@ -160,6 +157,7 @@
       <find>fund</find>
       <find>sign</find>
       <find>payment_made</find>
+      <find>confirm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,13 +200,13 @@
         <option value="$PROJECT_DIR$/application/config/production/constants.php" />
         <option value="$PROJECT_DIR$/application/views/user/dashboard.php" />
         <option value="$PROJECT_DIR$/application/helpers/site_helper.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
         <option value="$PROJECT_DIR$/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/application/language/english/english_lang.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/views/user/inc/sidebar.php" />
         <option value="$PROJECT_DIR$/application/views/user/payment_made.php" />
         <option value="$PROJECT_DIR$/application/views/user/my_wallet.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Dashboard.php" />
       </list>
     </option>
   </component>
@@ -301,12 +299,12 @@
       <workItem from="1554124240038" duration="4039000" />
       <workItem from="1554190402899" duration="789000" />
       <workItem from="1554196167387" duration="603000" />
-      <workItem from="1554295708834" duration="9130000" />
+      <workItem from="1554295708834" duration="9185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48261000" />
+    <option name="totallyTimeSpent" value="48316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -646,6 +644,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/my_wallet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="119" column="60" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
+          <folding>
+            <element signature="e#6081#6087#0#HTML" expanded="true" />
+            <element signature="e#6087#6093#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/payment_made.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -655,25 +664,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="176" column="32" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="32" />
+        <state relative-caret-position="329">
+          <caret line="189" column="39" lean-forward="true" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
           <folding>
             <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
-            <element signature="n#payment_made#0;n#Dashboard#0;n#!!top" />
             <element signature="n#payment_made_process#0;n#Dashboard#0;n#!!top" />
             <element signature="n#_submitGet#0;n#Dashboard#0;n#!!top" />
             <element signature="n#callSMSAPI#0;n#Dashboard#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/my_wallet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="119" column="60" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
-          <folding>
-            <element signature="e#6081#6087#0#HTML" expanded="true" />
-            <element signature="e#6087#6093#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

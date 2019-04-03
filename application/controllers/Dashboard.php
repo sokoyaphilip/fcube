@@ -187,7 +187,7 @@ class Dashboard extends CI_Controller {
             $page_data['page'] = 'payment_made';
             $page_data['title'] = "Payment Made";
             $page_data['user'] = $this->get_profile($this->session->userdata('logged_id'));
-            $this->load->view('app/users/payment_made', $page_data);
+            $this->load->view('app/user/payment_made', $page_data);
         }
     }
 
