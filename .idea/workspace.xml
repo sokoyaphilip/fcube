@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="189" column="39" lean-forward="true" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
+            <state relative-caret-position="284">
+              <caret line="189" column="31" selection-start-line="189" selection-start-column="31" selection-end-line="189" selection-end-column="31" />
               <folding>
                 <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
                 <element signature="n#payment_made_process#0;n#Dashboard#0;n#!!top" />
@@ -299,12 +299,12 @@
       <workItem from="1554124240038" duration="4039000" />
       <workItem from="1554190402899" duration="789000" />
       <workItem from="1554196167387" duration="603000" />
-      <workItem from="1554295708834" duration="9185000" />
+      <workItem from="1554295708834" duration="9234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48316000" />
+    <option name="totallyTimeSpent" value="48365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -644,6 +644,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/payment_made.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/my_wallet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -655,17 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/payment_made.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="189" column="39" lean-forward="true" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
+        <state relative-caret-position="284">
+          <caret line="189" column="31" selection-start-line="189" selection-start-column="31" selection-end-line="189" selection-end-column="31" />
           <folding>
             <element signature="n#profile_setting#0;n#Dashboard#0;n#!!top" />
             <element signature="n#payment_made_process#0;n#Dashboard#0;n#!!top" />
