@@ -19,6 +19,7 @@ class Dashboard extends CI_Controller {
 		$page_data['pg_title'] = "Welcome to your Dashboard";
 		$page_data['pg_name'] = "dashboard";
 		$id = $this->session->userdata('logged_id');
+        $page_data['user'] = $this->get_profile( $id );
         $page_data['products'] = $this->site->get_result('products');
         $query = "SELECT * FROM transactions WHERE user_id = {$id} ORDER BY id DESC ";
         $start = $end = $transaction ='';
