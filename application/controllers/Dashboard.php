@@ -116,7 +116,7 @@ class Dashboard extends CI_Controller {
         $page_data['page'] = 'profile';
         $page_data['title'] = "Proile Setting";
         $page_data['user'] = $this->site->run_sql("SELECT name, phone, email,user_code,wallet, account_name, account_type, bank_name FROM users WHERE id = {$id}")->row();
-        $this->load->view('users/profile', $page_data);
+        $this->load->view('user/profile', $page_data);
     }
 
     function profile_setting(){
@@ -187,7 +187,7 @@ class Dashboard extends CI_Controller {
             $page_data['page'] = 'payment_made';
             $page_data['title'] = "Payment Made";
             $page_data['user'] = $this->get_profile($this->session->userdata('logged_id'));
-            $this->load->view('users/payment_made', $page_data);
+            $this->load->view('user/payment_made', $page_data);
         }
     }
 
