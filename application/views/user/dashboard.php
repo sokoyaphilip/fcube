@@ -21,7 +21,7 @@
 						<div class="prices-box" style="border: 1px solid #ffc107;">
 							<div>
 								<h5 class="font-weight-normal">Wallet</h5>
-								<p>&#8358; 0.00</p>
+								<p><?= ngn($user->wallet); ?></p>
 							</div>
 						</div>
 					</div>

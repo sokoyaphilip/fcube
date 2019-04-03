@@ -108,7 +108,7 @@
 				</div>
 				<ul class="sidebar-menu">
                     <li class="">
-                        <a class="" href="<?= base_url("dashboard");?>"> <i class="fas fa-money-check-alt"></i> Wallet - <?= $user->wallet; ?></a>
+                        <a class="text text-danger" href="<?= base_url("dashboard");?>"> <i class="fas fa-money-check-alt"></i> Wallet - <?= ngn($user->wallet); ?></a>
                     </li>
 					<li class="<?php if($pg_name == "dashboard") echo "active";?>">
 						<a class="" href="<?= base_url("dashboard");?>"> <i class="fas fa-home"></i> Dashboard</a>
