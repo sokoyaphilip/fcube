@@ -355,20 +355,23 @@ class Ajax extends CI_Controller {
         // LETS PROCESS
 
         $this->form_validation->set_rules('amount', 'Amount','trim|required|xss_clean');
-        $this->form_validation->set_rules('network_name', 'Network','trim|required|xss_clean');
+        $this->form_validation->set_rules('network_id', 'Network','trim|required|xss_clean');
         $this->form_validation->set_rules('recipents', 'Recipents NUmber','trim|required|xss_clean');
         if(  $this->form_validation->run() == FALSE ){
             $response['message'] = validation_errors();
             $this->return_response( $response );
         }
 
+        $network_id = $this->input->post('network_id');
 
-        $product_id = $this->input->post('product_id', true);
+        $network_row = $this->get_network( $network_id );
+
+        $product_id = $network_row->product_id;
         $amount = $this->input->post('amount', true);
         $recipents = $this->input->post('recipents', true);
-        $network_name = $this->input->post('network_name', true);
+        $network_name = $network_row->network_name;
         $wallet = $this->input->post('wallet');
-        $discount = $this->input->post('discount');
+        $discount = $network_row->discount;
 
 
 
@@ -452,7 +455,7 @@ class Ajax extends CI_Controller {
                 if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
                     $this->site->insert_data('transactions', $insert_data);
                     $response['status'] = 'success';
-                    $response['message'] = "Thanks for using Gecharl. Your order {$message} has been processed and should be received in less than a minute. <br />";
+                    $response['message'] = "Thanks for using {lang('app_name')}. Your order {$message} has been processed and should be received in less than a minute. <br />";
                     if( $invalid_numbers != '' ){
                         $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or {$network_name} number";
                     }
@@ -1086,6 +1089,11 @@ class Ajax extends CI_Controller {
 //                die("Something went wrong while executing curl. Uncomment the var_dump line above this line to see what the issue is. Please check your CURL command to make sure everything is ok");
             }
         }
+    }
+
+
+    function get_network( $network_id ){
+        return $this->site->run_sql("SELECT title,network_name,discount, product_id FROM services WHERE id = {$network_id}")->row();
     }
 
     /* General FUnction
