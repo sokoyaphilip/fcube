@@ -362,12 +362,16 @@ class Ajax extends CI_Controller {
             $this->return_response( $response );
         }
 
+
         $product_id = $this->input->post('product_id', true);
         $amount = $this->input->post('amount', true);
         $recipents = $this->input->post('recipents', true);
         $network_name = $this->input->post('network_name', true);
         $wallet = $this->input->post('wallet');
         $discount = $this->input->post('discount');
+
+
+
 
         // check number validity
         $message = $description_number =  $invalid_numbers = '';

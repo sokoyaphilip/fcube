@@ -107,6 +107,9 @@
 					<a href="<?= base_url();?>"><img src="<?= base_url("assets/images/logo-1.jpeg");?>" style="width: 120px;min-height: 50px;" /></a>
 				</div>
 				<ul class="sidebar-menu">
+                    <li class="">
+                        <a class="" href="<?= base_url("dashboard");?>"> <i class="fas fa-money-check-alt"></i> Wallet - <?= $user->wallet; ?></a>
+                    </li>
 					<li class="<?php if($pg_name == "dashboard") echo "active";?>">
 						<a class="" href="<?= base_url("dashboard");?>"> <i class="fas fa-home"></i> Dashboard</a>
 					</li>

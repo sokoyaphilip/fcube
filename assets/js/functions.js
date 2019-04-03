@@ -317,7 +317,7 @@ $(document).ready(function() {
         _btn.prop('disabled', true);
         _btn.text("Processing...");
         let amount = $('#amount').val();
-        let network_id = $('#network').val();
+        let network_id = $('#airtime_network').val();
         let recipents = $('#recipents').val();
         let wallet = $(this).data('balance');
 
