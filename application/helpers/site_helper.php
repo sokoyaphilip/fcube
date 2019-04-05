@@ -348,7 +348,7 @@ function data_plan_code( $network , $plan, $number){
                     return "SMEB {$number} 500 3250";
                     break;
                 case "250MB":
-                    return "SMEA {$number} 250 3372";
+                    return "SMEA {$number} 250 3250";
                 default :
                     return false;
                     break;
@@ -387,44 +387,45 @@ function data_plan_code( $network , $plan, $number){
         }
             break;
         case "glo":
+        case "glo":
             switch ( $plan ){
-                case '15MB':
+                case '25MB':
                     return " *127*32*{$number}#";
                     break;
-                case '900MB':
+                case '800MB/920MB':
                     return " *127*57*{$number}#";
                     break;
-                case "1.84GB":
+                case '1.6GB/1.84GB':
                     return " *127*53*{$number}#";
                     break;
-                case "4.5GB":
+                case "3.65GB/4.5GB":
                     return " *127*55*{$number}#";
                     break;
-                case "7.2GB":
+                case "5.75GB/7.2GB":
                     return " *127*58*{$number}#";
                     break;
-                case "8.75GB":
+                case "7GB/8.2GB":
                     return " *127*54*{$number}#";
                     break;
-                case "12.5GB":
+                case "10GB/12.5GB":
                     return " *127*59*{$number}#";
                     break;
-                case "15.6GB":
+                case "12.5GB/15.6GB":
                     return " *127*2*{$number}#";
                     break;
-                case "25GB":
+                case "20GB/25GB":
                     return " *127*1*{$number}#";
                     break;
-                case "32.5GB":
+                case "26GB/32.5GB":
                     return " *127*11*{$number}#";
                     break;
-                case "52.5GB":
+                case "42GB/52.5GB":
                     return " *127*12*{$number}#";
                     break;
                 case "62.5GB":
                     return " *127*13*{$number}#";
                     break;
-                case "78.75GB":
+                case "63GB/78.7GB":
                     return " *127*33*{$number}#";
                     break;
                 default:
@@ -435,9 +436,9 @@ function data_plan_code( $network , $plan, $number){
         case "airtel":
 
             switch ( $plan ){
-                case '750MB':
-                    return " *141*5*2*2*1*1{$number}*1985#";
-                    break;
+//                case '750MB':
+//                    return " *141*5*2*2*1*1{$number}*1985#";
+//                    break;
                 case '1.5GB':
                     return " *141*5*2*1*5*1{$number}*1985#";
                     break;
@@ -447,15 +448,15 @@ function data_plan_code( $network , $plan, $number){
                 case "5.5GB":
                     return " *141*5*2*1*3*1{$number}*1985#";
                     break;
-                case "12GB":
-                    return " *141*5*2*3*1*1{$number}*1985#";
-                    break;
-                case "25GB":
-                    return " *141*5*2*3*2*1{$number}*1985#";
-                    break;
-                case "40GB":
-                    return " *141*5*2*3*3*1{$number}*1985#";
-                    break;
+//                case "12GB":
+//                    return " *141*5*2*3*1*1{$number}*1985#";
+//                    break;
+//                case "25GB":
+//                    return " *141*5*2*3*2*1{$number}*1985#";
+//                    break;
+//                case "40GB":
+//                    return " *141*5*2*3*3*1{$number}*1985#";
+//                    break;
                 default:
                     return false;
                     break;
