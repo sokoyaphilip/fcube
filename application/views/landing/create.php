@@ -3,7 +3,7 @@
 			<div class="bg-black-04">
 				<div class="container text-center">
 					<div class="position-middle">
-						<div class="row">
+						<div class="row" style="margin-top: 50px;">
 							<div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
 								<h4 class="font-weight-light margin-bottom-30">Registration</h4>
                                 <?php $this->load->view('msg_view'); ?>

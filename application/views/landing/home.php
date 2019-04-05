@@ -46,7 +46,7 @@
 			<div class="container">
 				<div class="row col-spacing-50 align-items-center">
 					<div class="col-12 col-lg-6">
-						<img src="<?=base_url("assets/images/business-consulting-about.jpg");?>" alt="">
+                        <img src="<?= base_url("assets/images/about-fcubedigital2.jpeg");?>" alt="About Fcube digital - mobile data and vtu">
 					</div>
 					<div class="col-12 col-lg-6">
 						<h2 class="font-weight-light">We Are F-Cube Digitals</h2>

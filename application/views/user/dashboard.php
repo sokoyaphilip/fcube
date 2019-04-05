@@ -2,45 +2,51 @@
 			<div class="section">
 				<div class="row" style="padding:5px;">
 					<div class="col-sm-4">
-						<div class="prices-box" style="border: 1px solid #ffc107;">
-							<div>
-								<h5 class="font-weight-normal">Buy Data</h5>
-								<p>Easy Data Recharge.</p>
-							</div>
-						</div>
+                        <a href="<?= base_url('dashboard/data_recharge'); ?>" title="Data Subscription for all network">
+                            <div class="prices-box" style="border: 1px solid #ffc107;">
+                                <div>
+                                    <h5 class="font-weight-normal">Buy Data</h5>
+                                    <p>Easy Data Recharge.</p>
+                                </div>
+                            </div>
+                        </a>
 					</div>
 					<div class="col-sm-4">
-						<div class="prices-box" style="border: 1px solid #1c6169;">
-							<div>
-								<h5 class="font-weight-normal">Buy Airtime</h5>
-								<p>Quick Recharge.</p>
-							</div>
-						</div>
+                        <a href="<?= base_url('dashboard/airtime_recharge'); ?>" title="Airtime recharge for all network">
+                            <div class="prices-box" style="border: 1px solid #1c6169;">
+                                <div>
+                                    <h5 class="font-weight-normal">Buy Airtime</h5>
+                                    <p>Quick Recharge.</p>
+                                </div>
+                            </div>
+                        </a>
 					</div>
 					<div class="col-sm-4">
-						<div class="prices-box" style="border: 1px solid #ffc107;">
-							<div>
-								<h5 class="font-weight-normal">Wallet</h5>
-								<p><?= ngn($user->wallet); ?></p>
-							</div>
-						</div>
+                        <a href="<?= base_url('dashboard/my_wallet'); ?>" title="Fund your wallet">
+                            <div class="prices-box" style="border: 1px solid #ffc107;">
+                                <div>
+                                    <h5 class="font-weight-normal">Wallet</h5>
+                                    <p><?= ngn($user->wallet); ?></p>
+                                </div>
+                            </div>
+                        </a>
 					</div>
-					<div class="col-sm-6">
-						<div class="prices-box" style="border: 1px solid #1c6169;">
-							<div>
-								<h5 class="font-weight-normal">TV Subscription</h5>
-								<p>Pay for your TV Service provider online.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="prices-box" style="border: 1px solid #1c6169;">
-							<div>
-								<h5 class="font-weight-normal">Buy Electric</h5>
-								<p>Pay for Electric bills online.</p>
-							</div>
-						</div>
-					</div>
+<!--					<div class="col-sm-6">-->
+<!--						<div class="prices-box" style="border: 1px solid #1c6169;">-->
+<!--							<div>-->
+<!--								<h5 class="font-weight-normal">TV Subscription</h5>-->
+<!--								<p>Pay for your TV Service provider online.</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-sm-6">-->
+<!--						<div class="prices-box" style="border: 1px solid #1c6169;">-->
+<!--							<div>-->
+<!--								<h5 class="font-weight-normal">Buy Electric</h5>-->
+<!--								<p>Pay for Electric bills online.</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
 				</div>
 			</div>
 

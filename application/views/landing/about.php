@@ -1,8 +1,8 @@
 <?php $this->load->view('inc/header');?>
 <div class="section">
 			<div class="container">
-				<div class="row align-items-center col-spacing-50">
-					<div class="col-12 col-lg-6">
+				<div class="row align-items-center col-spacing-50 padding-30">
+					<div class="col-12 col-lg-8">
 						<h3 class="font-weight-light">WF-CUBE DIGITALS is an enterprise solution which offers a platform for all airtime recharges for all networks, internet data subscriptions for all networks, cable tv subscriptions like DSTV, GOtv, startimes, etc as well as Electricity bill payments.</h3>
                         <p>
                             Fcube provides a very convenient and effective means of all subscriptions at the most affordable rates.<br />Our services are instant and works on all devices.
@@ -12,19 +12,12 @@
                         </p>
 
 					</div>
-					<div class="col-12 col-lg-6">
-						<div class="row gallery-wrapper spacing-20">
-							<div class="col-6 gallery-box">
+					<div class="col-12 col-lg-4">
+						<div class="row gallery-wrapper spacing-10">
+							<div class="col-12 gallery-box">
 								<div class="gallery-img">
 									<a href="#" data-gallery-title="Gallery Image 1">
-										<img src="<?= base_url("assets/images/about-us1.jpeg");?>" alt="About Fcube digital">
-									</a>
-								</div>
-							</div>
-							<div class="col-6 gallery-box">
-								<div class="gallery-img">
-									<a href="#" data-gallery-title="Gallery Image 2">
-										<img src="<?= base_url("assets/images/about-us2.jpeg");?>" alt="About Fcube digital">
+										<img src="<?= base_url("assets/images/about-fcubedigital1.jpeg");?>" alt="About Fcube digital - mobile data and vtu">
 									</a>
 								</div>
 							</div>

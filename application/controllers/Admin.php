@@ -32,26 +32,30 @@ class Admin extends CI_Controller {
                 $query .= " AND product_id = {$transaction} ORDER BY id DESC";
             }
         }
-        $today = date('Y-m-d', strtotime('today'));
+        $today_sales = $this->site->run_sql("SELECT SUM(amount) amt FROM transactions WHERE DATE(date_initiated) = CURDATE() AND (status = 'success' OR status = 'approved')")->result_array();
+        $page_data['today'] = array_sum(array_column($today_sales, 'amt'));
 
-        $page_data['today'] = $this->site->run_sql("SELECT SUM(amount) amount FROM transactions WHERE date_initiated = '$today' AND (status = 'success' OR status = 'approve') ")->row()->amount;
+        $first_day = date('Y-m-d', strtotime('last monday'));
+        $last_day = date('Y-m-d', strtotime('next sunday'));
 
-//        die("SELECT SUM(amount) amount FROM transactions WHERE date_initiated = '$today' AND (status = 'success' OR status = 'approve') ");
-        $first_day = date('Y-m-d', strtotime('first day of the week'));
-        $last_day = date('Y-m-d', strtotime('last day of the week'));
-        $page_data['week'] = $this->site->run_sql("SELECT SUM(amount) amount FROM transactions 
-        WHERE date_initiated BETWEEN('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approved' )  ")->row()->amount;
+        $this_week_sales = $this->site->run_sql("SELECT SUM(amount) amt FROM transactions WHERE 
+        (DATE(date_initiated) >= '{$first_day}' AND DATE(date_initiated) <= '{$last_day}') 
+        AND (status = 'success' OR status = 'approved') ")->result_array();
+        $page_data['week'] = array_sum(array_column($this_week_sales, 'amt'));
 
-        $first_day = date('Y-m-d', strtotime('first day of the month'));
-        $last_day = date('Y-m-d', strtotime('last day of the month'));
-        $page_data['month'] = $this->site->run_sql("SELECT SUM(amount) amount FROM transactions 
-        WHERE date_initiated BETWEEN('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approved' ) ")->row()->amount;
+        $this_month = date('m', strtotime('this month'));
+        $month = $this->site->run_sql("SELECT SUM(amount) amt FROM transactions WHERE 
+        (MONTH(date_initiated) = '{$this_month}') 
+        AND (status = 'success' OR status = 'approved' ) ")->result_array();
+
+        $page_data['month'] = array_sum(array_column($month, 'amt'));
 
 
-        $first_day = date('Y-m-d', strtotime('first day of the year'));
-        $last_day = date('Y-m-d', strtotime('last day of the year'));
-        $page_data['year'] = $this->site->run_sql("SELECT SUM(amount) amount FROM transactions 
-        WHERE date_initiated BETWEEN ('{$first_day}' AND '{$last_day}') AND (status = 'success' OR status = 'approved' )")->row()->amount;
+        $this_year = date('Y', strtotime('this year'));
+        $year = $this->site->run_sql("SELECT SUM(amount) amt FROM transactions WHERE 
+        (YEAR(date_initiated) >= '{$this_year}') 
+        AND (status = 'success' OR status = 'approved' )")->result_array();
+        $page_data['year'] = array_sum(array_column($year, 'amt'));
 
 
         $page_data['transactions'] = $this->site->run_sql( $query )->result();
@@ -128,7 +132,8 @@ class Admin extends CI_Controller {
             $page_data['page'] = 'approval';
             $page_data['fundings'] = $this->site->run_sql("SELECT t.* , u.name name, u.phone, u.email FROM transactions t LEFT JOIN users u ON (u.id = t.user_id) 
         WHERE t.status = 'pending' AND t.product_id = 6")->result();
-            $page_data['airtime_to_cash_pin'] = $this->site->get_result('airtime_to_cash', 'id,tid,uid,incoming,outgoing,details,datetime,status,type', "(status = 'pending')");
+            $page_data['airtime_to_cash_pin'] = $this->site->run_sql("SELECT a.* , t.description FROM airtime_to_cash a LEFT JOIN transactions t ON (t.id = a.tid) 
+            WHERE a.status = 'pending' ORDER BY a.id DESC")->result();
             $page_data['title'] = "Funding Approval";
             $this->load->view('admin/wallet_funding', $page_data);
         }

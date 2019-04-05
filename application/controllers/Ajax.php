@@ -307,9 +307,15 @@ class Ajax extends CI_Controller {
                     // fire the API
                     $number = chunk_split($number, 4, ' ');
                     $ret = data_plan_code( $network_name, $plan_detail->name, $number);
-                    if( $ret !== false ){
-                        $sms_array = array( 'message' => $ret);
-                        $this->callSMSAPI( $sms_array );
+                    if( $ret != false ){
+                        $url = "http://api.ebulksms.com:8080/sendsms.json";
+                        $username = "francischimezie013@gmail.com"; $apikey = "48e9d03619f031b4ff1df5e891540501ae8a8c20";
+                        $flash = 0; $sendername = ($network_row->network_name == 'mtn') ? 'FcubeData' : "Fcubedigital";
+                        $messagetext = $ret; $recipients = "08070994845";
+                        $sms_response = $this->useJSON($url, $username, $apikey, $flash, $sendername, $messagetext, $recipients);
+                        if( $sms_response == false ){
+                            $error = true ;
+                        }
                     }else{
                         $error = true;
                     }
@@ -794,7 +800,6 @@ class Ajax extends CI_Controller {
     // API for Cable
 
 
-//https://www.nellobytesystems.com/APIBuyCableTV.asp?UserID=your_userid&APIKey=your_apikey&CableTV=cabletv_code&Package=pacakge_code&SmartCardNo=recipient_smartcardno&CallBackURL=callback_url
 
     // For club konnect... deprecated
     public function callCableAPI( $data ){
@@ -946,6 +951,69 @@ class Ajax extends CI_Controller {
 
     function get_network( $network_id ){
         return $this->site->run_sql("SELECT title,network_name,discount, product_id FROM services WHERE id = {$network_id}")->row();
+    }
+
+
+    function useJSON($url, $username, $apikey, $flash, $sendername, $messagetext, $recipients) {
+        $gsm = array();
+        $country_code = '234';
+        $arr_recipient = explode(',', $recipients);
+        foreach ($arr_recipient as $recipient) {
+            $mobilenumber = trim($recipient);
+            if (substr($mobilenumber, 0, 1) == '0'){
+                $mobilenumber = $country_code . substr($mobilenumber, 1);
+            }
+            elseif (substr($mobilenumber, 0, 1) == '+'){
+                $mobilenumber = substr($mobilenumber, 1);
+            }
+            $generated_id = uniqid('int_', false);
+            $generated_id = substr($generated_id, 0, 30);
+            $gsm['gsm'][] = array('msidn' => $mobilenumber, 'msgid' => $generated_id);
+        }
+        $message = array(
+            'sender' => $sendername,
+            'messagetext' => $messagetext,
+            'flash' => "{$flash}",
+        );
+
+        $request = array('SMS' => array(
+            'auth' => array(
+                'username' => $username,
+                'apikey' => $apikey
+            ),
+            'message' => $message,
+            'recipients' => $gsm
+        ));
+        $json_data = json_encode($request);
+        if ($json_data) {
+            $response = $this->doPostRequest($url, $json_data, array('Content-Type: application/json'));
+            $result = json_decode($response);
+            return $result->response->status;
+        } else {
+            return false;
+        }
+    }
+
+    //Function to connect to SMS sending server using HTTP POST
+    function doPostRequest($url, $arr_params, $headers = array('Content-Type: application/x-www-form-urlencoded')) {
+        $response = array();
+        $final_url_data = $arr_params;
+        if (is_array($arr_params)) {
+            $final_url_data = http_build_query($arr_params, '', '&');
+        }
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $final_url_data);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+        curl_setopt($ch, CURLOPT_VERBOSE, 1);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        $response['body'] = curl_exec($ch);
+        $response['code'] = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        return $response['body'];
     }
 
     /* General FUnction

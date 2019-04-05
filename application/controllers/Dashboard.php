@@ -114,7 +114,9 @@ class Dashboard extends CI_Controller {
     public function profile(){
         $id = $this->session->userdata('logged_id');
         $page_data['page'] = 'profile';
-        $page_data['title'] = "Proile Setting";
+        $page_data['pg_title'] = "Profile Settings";
+        $page_data['pg_name'] = "airtime";
+        $page_data['title'] = 'Recharge Airtime';
         $page_data['user'] = $this->site->run_sql("SELECT name, phone, email,user_code,wallet, account_name, account_type, bank_name FROM users WHERE id = {$id}")->row();
         $this->load->view('user/profile', $page_data);
     }
@@ -185,7 +187,9 @@ class Dashboard extends CI_Controller {
         }else{
             $page_data['row'] = $row;
             $page_data['page'] = 'payment_made';
-            $page_data['title'] = "Payment Made";
+            $page_data['pg_title'] = "Payment Made";
+            $page_data['pg_name'] = "airtime";
+            $page_data['title'] = 'Recharge Airtime';
             $page_data['user'] = $this->get_profile($this->session->userdata('logged_id'));
             $this->load->view('user/payment_made', $page_data);
         }

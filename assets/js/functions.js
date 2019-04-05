@@ -269,9 +269,9 @@ $(document).ready(function() {
                         window.location = window.location.href;
                     })
                 }else{
+                    $(this).prop('disabled', false);
                     sweet_alert('Error', response.message, 'error', false);
                     _btn.text("Buy Now");
-                    $(this).prop('disabled', false);
                 }
             }
         });
