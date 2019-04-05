@@ -425,7 +425,7 @@ function data_plan_code( $network , $plan, $number){
                 case "62.5GB":
                     return " *127*13*{$number}#";
                     break;
-                case "63GB/78.7GB":
+                case "63GB/78.75GB":
                     return " *127*33*{$number}#";
                     break;
                 default:
