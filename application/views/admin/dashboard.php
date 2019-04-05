@@ -55,7 +55,7 @@
 						<div class="prices-box" style="border: 1px solid #1c6169;">
 							<div>
 								<h5 class="font-weight-normal">Manage Users</h5>
-								<p>Manage all system user.</p>
+								<p><?= anchor('admin/manage_users/', 'Manage all system user.'); ?>.</p>
 							</div>
 						</div>
 					</div>

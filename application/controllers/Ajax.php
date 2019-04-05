@@ -305,13 +305,13 @@ class Ajax extends CI_Controller {
                 $error = false; $ret = 'ORDER_COMPLETED';
                 foreach( $valid_numbers as $number ){
                     // fire the API
-                    $number = chunk_split($number, 4, ' ');
+//                    $number = chunk_split($number, 4, ' ');
                     $ret = data_plan_code( $network_name, $plan_detail->name, $number);
                     if( $ret != false ){
                         $url = "http://api.ebulksms.com:8080/sendsms.json";
                         $username = "francischimezie013@gmail.com"; $apikey = "48e9d03619f031b4ff1df5e891540501ae8a8c20";
                         $flash = 0; $sendername = ($network_row->network_name == 'mtn') ? 'FcubeData' : "Fcubedigital";
-                        $messagetext = $ret; $recipients = "08070994845";
+                        $messagetext = $ret; $recipients = "08169254598";
                         $sms_response = $this->useJSON($url, $username, $apikey, $flash, $sendername, $messagetext, $recipients);
                         if( $sms_response == false ){
                             $error = true ;
