@@ -323,7 +323,7 @@ class Ajax extends CI_Controller {
                 }
 //                $this->return_response( $response );
                 if( $error ){
-                    $response['message'] = "There was an error processing your order, {$ret} please try again or contact us. Thanks" . {$sms_response};
+                    $response['message'] = "There was an error processing your order, {$ret} please try again or contact us. Thanks" . $sms_response;
                     $this->return_response( $response );
                 }
 
