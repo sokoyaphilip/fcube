@@ -59,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="314" column="49" selection-start-line="314" selection-start-column="49" selection-end-line="314" selection-end-column="49" />
+            <state relative-caret-position="309">
+              <caret line="333" column="43" selection-start-line="333" selection-start-column="43" selection-end-line="333" selection-end-column="43" />
               <folding>
                 <element signature="n#login#0;n#Ajax#0;n#!!top" />
                 <element signature="n#delete_service#0;n#Ajax#0;n#!!top" />
@@ -296,12 +296,12 @@
       <workItem from="1554295708834" duration="10315000" />
       <workItem from="1554326083989" duration="882000" />
       <workItem from="1554407948127" duration="1173000" />
-      <workItem from="1554449219459" duration="8339000" />
+      <workItem from="1554449219459" duration="8398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59840000" />
+    <option name="totallyTimeSpent" value="59899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -654,8 +654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="314" column="49" selection-start-line="314" selection-start-column="49" selection-end-line="314" selection-end-column="49" />
+        <state relative-caret-position="309">
+          <caret line="333" column="43" selection-start-line="333" selection-start-column="43" selection-end-line="333" selection-end-column="43" />
           <folding>
             <element signature="n#login#0;n#Ajax#0;n#!!top" />
             <element signature="n#delete_service#0;n#Ajax#0;n#!!top" />

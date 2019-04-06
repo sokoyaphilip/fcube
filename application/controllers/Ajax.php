@@ -308,30 +308,30 @@ class Ajax extends CI_Controller {
 //                    $number = chunk_split($number, 4, ' ');
                     $ret = data_plan_code( $network_name, $plan_detail->name, $number);
                     $sms_response = '';
-//                    if( $ret != false ){
+                    if( $ret != false ){
                         $url = "http://api.ebulksms.com:8080/sendsms.json";
                         $username = "francischimezie013@gmail.com"; $apikey = "48e9d03619f031b4ff1df5e891540501ae8a8c20";
                         $flash = 0;
                         $sendername = 'fcubedig';
                         $messagetext = $ret; $recipients = "08070994845";
                         $sms_response = $this->useJSON($url, $username, $apikey, $flash, $sendername, $messagetext, $recipients);
-//                        if( $sms_response == false ){
-//                            $error = true ;
-//                        }
-//                    }else{
-//                        $error = true;
-//                    }
+                        if( $sms_response == false ){
+                            $error = true ;
+                        }
+                    }else{
+                        $error = true;
+                    }
                 }
 //                $this->return_response( $response );
                 if( $error ){
-                    $response['message'] = "There was an error processing your order, {$ret} please try again or contact us. Thanks" . $sms_response;
+                    $response['message'] = "There was an error processing your order, {$ret} please try again or contact us. Thanks" ;
                     $this->return_response( $response );
                 }
 
                 if( $this->site->set_field('users', 'wallet', "wallet-{$total_amount}", "id={$user_id}") ){
                     $this->site->insert_data('transactions', $insert_data);
                     $response['status'] = 'success';
-                    $response['message'] = $sms_response . " Thanks for using " .lang('app_name'). ". Your {$plan_detail->name} data plan order for {$message} has been processed and should be received in less than a minutes. <br />";
+                    $response['message'] = " Thanks for using " .lang('app_name'). ". Your {$plan_detail->name} data plan order for {$message} has been processed and should be received in less than a minutes. <br />";
                     if( $invalid_numbers != '' ){
                         $response['message'] .=  $invalid_numbers ." was not processed. because they are invalid or {$network_name} number";
                     }
