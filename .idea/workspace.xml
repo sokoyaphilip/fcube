@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ed41b2-8c86-4dd8-86f1-fe6bf72507b0" name="Default Changelist" comment="" />
+    <list default="true" id="68ed41b2-8c86-4dd8-86f1-fe6bf72507b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/application/helpers/site_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/site_helper.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="847" column="39" lean-forward="true" selection-start-line="847" selection-start-column="39" selection-end-line="847" selection-end-column="39" />
+            <state relative-caret-position="-1146">
+              <caret line="224" column="25" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="25" />
               <folding>
                 <element signature="n#login#0;n#Ajax#0;n#!!top" />
                 <element signature="n#delete_service#0;n#Ajax#0;n#!!top" />
@@ -86,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="854">
-              <caret line="427" column="32" selection-start-line="427" selection-start-column="32" selection-end-line="427" selection-end-column="32" />
+            <state relative-caret-position="314">
+              <caret line="391" column="24" selection-start-line="391" selection-start-column="24" selection-end-line="391" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -294,15 +296,16 @@
       <workItem from="1554295708834" duration="10315000" />
       <workItem from="1554326083989" duration="882000" />
       <workItem from="1554407948127" duration="1173000" />
-      <workItem from="1554449219459" duration="7259000" />
+      <workItem from="1554449219459" duration="7653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58760000" />
+    <option name="totallyTimeSpent" value="59154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16023166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -644,8 +647,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="847" column="39" lean-forward="true" selection-start-line="847" selection-start-column="39" selection-end-line="847" selection-end-column="39" />
+        <state relative-caret-position="-1146">
+          <caret line="224" column="25" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="25" />
           <folding>
             <element signature="n#login#0;n#Ajax#0;n#!!top" />
             <element signature="n#delete_service#0;n#Ajax#0;n#!!top" />
@@ -662,8 +665,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/helpers/site_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="854">
-          <caret line="427" column="32" selection-start-line="427" selection-start-column="32" selection-end-line="427" selection-end-column="32" />
+        <state relative-caret-position="314">
+          <caret line="391" column="24" selection-start-line="391" selection-start-column="24" selection-end-line="391" selection-end-column="24" />
         </state>
       </provider>
     </entry>

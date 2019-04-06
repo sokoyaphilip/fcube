@@ -389,7 +389,7 @@ function data_plan_code( $network , $plan, $number){
         case "glo":
         case "glo":
             switch ( $plan ){
-                case '25MB':
+                case '15MB':
                     return " *127*32*{$number}#";
                     break;
                 case '800MB/920MB':
